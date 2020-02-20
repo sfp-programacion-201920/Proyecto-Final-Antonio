@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styleformulario.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>Completa el formulario de registro</header><br>
+    <main>
+        <section>
+            <fieldset>
+                <legend>Datos</legend>
+                <form name="Formulario de registro" action="mailto:antoniojimenezriquelme@gmail.com" method="POST"
+                    target="_self" enctype="multipart/form-data">
+                    <label>Introduce tu nombre: </label><input type="text" name="Nombre" size="15" autocomplete="name"
+                        autofocus required placeholder="Nombre"><br><br>
+                    <label>Introduce tus apellidos: </label><input type="text" name="Apellidos" size="50"
+                        autocomplete="name" required placeholder="Apellidos"><br><br>
+                    <label>¿Quieres que te llame de alguna otra manera?</label> <input type="text" name="Apodo"
+                        size="10" autocomplete="nickname"><br><br>
+                    <label>Escribe una contraseña: </label><input type="password" name="Contraseña" minlength="6"
+                        maxlength="18" required><br><br>
+                    <label>Introduce tu edad: </label><input type="number" name="Edad" step="1" required
+                        placeholder="18" min="18"><br><br>
+                    <label>Para estar en contacto dime tu numero de telefono: </label><input type="tel" name="Telefono"
+                        value="+34"><br><br>
+                    <label>Introduce tu correo electronico para confirmar el registro: </label><input type="email"
+                        name="Correo" size="50" autocomplete="email" required
+                        placeholder="@gmail.com, @outlook.es"><br><br>
+                    <label>Introduce tu fecha de nacimiento: </label><input type="date" name="Fecha" required><br><br>
+                    <label>Introduce tu uso horario para ajustar nuestros horarios al tuyo: </label><input
+                        type="datetime-local" name="Hora" required><br><br>
+                    <label>Sube una foto de perfil: </label><input type="file" name="Icono" accept=".jpg, .png"><br><br>
+                    <label id="Pilotos">Seleccione su piloto favorito</label><br>
+                    <select name="Pilotos">
+                        <option value="Hamilton">Lewis Hamilton</option>
+                        <option value="Bottas">Valteri Bottas</option>
+                        <option value="Leclerc">Charles Leclerc</option>
+                        <option value="Vettel">Sebastian Vettel</option>
+                        <option value="Verstappen">Max Verstappen</option>
+                        <option value="Albon">Alexander Albon</option>
+                        <option value="Sainz">Carlos Sainz</option>
+                        <option value="Norris">Lando Norris</option>
+                        <option value="Ricciardo">Daniel Ricciardo</option>
+                        <option value="Hülkenberg">Nico Hülkenberg</option>
+                        <option value="Gasly">Pierre Gasly</option>
+                        <option value="Kvyat">Daniil Kvyat</option>
+                        <option value="Perez">Sergio Perez</option>
+                        <option value="Stroll">Lance Stroll</option>
+                        <option value="Raikkönen">Kimi Raikkönen</option>
+                        <option value="Giovinnazi">Antonio Giovinnazi</option>
+                        <option value="Magnussen">Kevin Magnussen</option>
+                        <option value="Grosjean">Romain Grosjean</option>
+                        <option value="Russell">George Russell</option>
+                        <option value="Kubika">Robert Kubica</option>
+                    </select>
+                    <br><br>
+                    <label>Selecciona los equipos de Formula 1 de los que quieres recibir información:</label><br>
+                    <input type="checkbox" name="Mercedes"><label id="Mercedes">Mercedes</label><br>
+                    <input type="checkbox" name="Ferrari"><label id="Ferrari">Ferrari</label><br>
+                    <input type="checkbox" name="Red Bull"><label id="Red_Bull">Red Bull</label><br>
+                    <input type="checkbox" name="Mclaren"><label id="Mclaren">Mclaren</label><br>
+                    <input type="checkbox" name="Renault"><label id="Renault">Renault</label><br>
+                    <input type="checkbox" name="Toro Rosso"><label id="Toro_Rosso">Toro Rosso</label><br>
+                    <input type="checkbox" name="Racing Point"><label id="Racing_Point">Racing Point</label><br>
+                    <input type="checkbox" name="Alfa Romeo"><label id="Alfa_Romeo">Alfa Romeo</label><br>
+                    <input type="checkbox" name="Haas"><label id="Haas">Haas</label><br>
+                    <input type="checkbox" name="Williams"><label id="Williams">Williams</label><br><br>
+                    <label>Selecciona tu equipo favorito de la parrilla:</label><br>
+                    <input type="radio" name="Mercedes"><label id="Mercedes_Petronas">Mercedes</label><br>
+                    <input type="radio" name="Ferrari"><label id="Scuderia_Ferrari">Ferrari</label><br>
+                    <input type="radio" name="Red Bull"><label id="Aston_Martin_Red_Bull">Red Bull</label><br>
+                    <input type="radio" name="Mclaren"><label id="Mclaren_F1">Mclaren</label><br>
+                    <input type="radio" name="Renault"><label id="Renault_F1">Renault</label><br>
+                    <input type="radio" name="Toro Rosso"><label id="Alpha_Tauri">Toro Rosso</label><br>
+                    <input type="radio" name="Racing Point"><label id="Racing_Point_Force_India">Racing
+                        Point</label><br>
+                    <input type="radio" name="Alfa Romeo"><label id="Alfa_Romeo_Sauber">Alfa Romeo</label><br>
+                    <input type="radio" name="Haas"><label id="Gene_Haas">Haas</label><br>
+                    <input type="radio" name="Williams"><label id="Williams_Mercedes">Williams</label><br><br>
+                    <label id="Satisfaccion">Indica tu valor de satisfacción con la Formula 1 actual</label><br>
+                    <input type="range" name="Satisfaccion" min="0" max="10" step="1"><br><br>
+                    <label id="Categorias">Hablanos sobre otras categorias que te gusten del mundo del
+                        motor</label><br><textarea name="Categorias" rows="10"
+                        placeholder="Formula E, Indycar, Nascar, WEC, etc." cols="55"></textarea><br><br>
+                    <button type="reset" value="reset" name="Reset">Reiniciar registro</button><br><br>
+                    <button type="submit" value="Enviar" name="Enviar">Enviar registro</button>
+                </form>
+            </fieldset>
+            <footer>
+                <p><a href="../index.html#inicio"><img alt="Volver a la página principal" src="../images/back.png"
+                            width="100"></a></p>
+                <p>Hecho por: Antonio Jiménez</p>
+                <p>Blog creado para la asignatura de programacion B</p>
+                <p>2019-2020</p>
+                <a href="https://twitter.com/byAEG7">
+                    <picture class="logos">
+                        <img src="../icons/39379.png" width="40" alt="Logo Twitter">
+                    </picture>
+                </a>
+                <a href="https://www.instagram.com/antonio.jimenez7/">
+                    <picture class="logos">
+                        <img src="../icons/02c85a60b3970ef0dfdee9ac16bb0586_png-icon-transparent-background_1600-1600.png"
+                            width="40" alt="Logo Instagram">
+                    </picture>
+                </a>
+                <a href="https://www.facebook.com/antonio.jimenezriquelmeloperena">
+                    <picture class="logos" id="facebook">
+                        <img src="../icons/facebook-logo-clipart-black-and-white-18.png" width="40" alt="Logo Facebook">
+                    </picture>
+                </a>
+            </footer>
+        </section>
+    </main>
+</body>
+
+</html>

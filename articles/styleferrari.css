@@ -1,0 +1,49 @@
+body
+{
+    background-color:white;
+    font-family: 'Source Sans Pro', sans-serif;
+
+}
+h2
+{
+    color: black;
+    text-align: center;
+    margin-top: 75px;
+}
+p
+{
+    color:white;
+    align-content: center;
+}
+footer
+{
+    background-color: #393D42;
+    text-align: center;
+    padding-top: 30px;
+    color: white;
+}
+.logos
+{
+    margin: 650px;
+}
+article
+{
+    background-color: red;
+    padding: 15px 15px 140px 15px;
+    margin: 75px;
+    border-radius: 15px;
+}
+#facebook
+{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+aside
+{
+    text-align: center;
+}
+figure
+{
+    text-align: center;
+}
