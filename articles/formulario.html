@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./styleformulario.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <script src="../JavaScript.js"></script>
 </head>
 
 <body>
@@ -16,29 +17,28 @@
         <section>
             <fieldset>
                 <legend>Datos</legend>
-                <form name="Formulario de registro" action="mailto:antoniojimenezriquelme@gmail.com" method="POST"
+                <form name="formulario" onkeyup="valid_password()" onblur="valid_correo()" onfocus="warning_password()"
+                    onsubmit="form_completo()" onclick="driver()" action="mailto:antoniojimenezriquelme@gmail.com" method="POST"
                     target="_self" enctype="multipart/form-data">
-                    <label>Introduce tu nombre: </label><input type="text" name="Nombre" size="15" autocomplete="name"
-                        autofocus required placeholder="Nombre"><br><br>
+                    <label>Introduce tu nombre: </label><input type="text" name="nombre" id="nombre" size="15"
+                        autocomplete="name" autofocus placeholder="Nombre"><br><br>
                     <label>Introduce tus apellidos: </label><input type="text" name="Apellidos" size="50"
-                        autocomplete="name" required placeholder="Apellidos"><br><br>
-                    <label>¿Quieres que te llame de alguna otra manera?</label> <input type="text" name="Apodo"
-                        size="10" autocomplete="nickname"><br><br>
-                    <label>Escribe una contraseña: </label><input type="password" name="Contraseña" minlength="6"
-                        maxlength="18" required><br><br>
-                    <label>Introduce tu edad: </label><input type="number" name="Edad" step="1" required
-                        placeholder="18" min="18"><br><br>
-                    <label>Para estar en contacto dime tu numero de telefono: </label><input type="tel" name="Telefono"
-                        value="+34"><br><br>
+                        autocomplete="name" placeholder="Apellidos"><br><br>
+                    <label>¿Quieres que te llame de alguna otra manera?</label> <input type="text" name="apodo"
+                        id="apodo" size="10" autocomplete="nickname"><br><br>
+                    <label>Escribe una contraseña: </label><input type="password" id="contraseña"
+                        name="contraseña"><br><br>
+                    <label>Introduce tu edad: </label><input type="number" name="Edad" step="1" placeholder="18"
+                        min="18"><br><br>
+                    <label>Para estar en contacto dime tu numero de telefono: </label><input type="tel" id="telefono"
+                        name="telefono" value="+34"><br><br>
                     <label>Introduce tu correo electronico para confirmar el registro: </label><input type="email"
-                        name="Correo" size="50" autocomplete="email" required
+                        id="correo" name="correo" size="50" autocomplete="email"
                         placeholder="@gmail.com, @outlook.es"><br><br>
-                    <label>Introduce tu fecha de nacimiento: </label><input type="date" name="Fecha" required><br><br>
-                    <label>Introduce tu uso horario para ajustar nuestros horarios al tuyo: </label><input
-                        type="datetime-local" name="Hora" required><br><br>
+                    <label>Introduce tu fecha de nacimiento: </label><input type="date" name="date"><br><br>
                     <label>Sube una foto de perfil: </label><input type="file" name="Icono" accept=".jpg, .png"><br><br>
                     <label id="Pilotos">Seleccione su piloto favorito</label><br>
-                    <select name="Pilotos">
+                    <select name="pilotos" id="pilotos">
                         <option value="Hamilton">Lewis Hamilton</option>
                         <option value="Bottas">Valteri Bottas</option>
                         <option value="Leclerc">Charles Leclerc</option>
